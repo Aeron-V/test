@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quiz ka muna</title>
+  <style>
+  body {
+    text-align: center;
+    margin-top: 100px;
+    background: black;
+  }
+  
+    button {
+      font-size: 20px;
+      color: white;
+      background: cyan;
+      border-radius: 5px;
+      border: 2px solid whitesmoke;
+      transition: 0.2s;
+    }
+    
+    button:hover {
+      background: deeppink;
+      border: 2px solid deepskyblue;
+      color: black;
+    }
+    
+    label {
+      font-size: 40px;
+      color: white;
+    }
+    
+    section {
+      margin-bottom: 10px;
+      color: white;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    
+    .container {
+      background: linear-gradient(to left, darkmagenta, cyan);
+      padding: 30px 30px 30px 30px;
+      border-radius: 15px;
+      border: 5px solid cyan;
+    }
+    
+    header {
+      color: white;
+      padding-bottom: 50px;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      text-shadow: 5px 0px 2px cyan;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Simple questions</h1>
+  </header>
+  <section>
+    <h2><u>Gwapo/Gwapa ka?</u></h2>
+  </section>
+  <div class="container">
+  <label id="countLabel">?</label>
+  <br>
+  <br>
+  <div>
+    <button id="increaseBtn">yes</button>
+    <button id="resetBtn">maybe</button>
+    <button id="decreaseBtn">no</button>
+  </div>
+  <br>
+  <button id="liwat">reset</button>
+  </div>
+  <script>
+  const increaseBtn = document.getElementById('increaseBtn');
+  const decreaseBtn = document.getElementById('decreaseBtn');
+  const resetBtn = document.getElementById('resetBtn');
+  const countLabel = document.getElementById('countLabel');
+  const liwat = document.getElementById('liwat');
+  
+  let count = 0;
+  let yes = 'nag yes ka kay abi mo tuod mangu ka man guro, tang ina mo😎'
+  let maybe = '🖕'
+  let no = 'pa humble pa gid ni siya ya gwapo/gwapa ka ah😎 HAHAHAHAHA'
+  let reset = "?";
+  
+  increaseBtn.onclick = function(){
+    countLabel.textContent = yes;
+  }
+  
+  resetBtn.onclick = function(){
+    countLabel.textContent = maybe;
+  }
+  
+  decreaseBtn.onclick = function() {
+    countLabel.textContent = no;
+  }
+  
+  liwat.onclick = function(){
+    countLabel.textContent = reset;
+  }
+  </script>
+</body>
+
+</html>
